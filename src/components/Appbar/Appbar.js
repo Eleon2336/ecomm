@@ -1,4 +1,7 @@
-import { useMediaQuery, useTheme } from "@mui/material";
+import { 
+    useMediaQuery, 
+    useTheme 
+} from "@mui/material";
 import AppbarMobile from "./AppbarMobile";
 import AppbarDesktop from "./AppbarDesktop";
 
@@ -9,7 +12,7 @@ export default function Appbar() {
     
     return (
         <>
-            {matches ? <AppbarMobile /> : <AppbarDesktop />}
+            {matches ? <AppbarMobile matches={matches} /> : <AppbarDesktop matches={matches} />}
         </>
     );
 }

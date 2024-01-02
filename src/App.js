@@ -1,4 +1,8 @@
-import { Button, Container, ThemeProvider } from '@mui/material';
+import { 
+  Button, 
+  Container, 
+  ThemeProvider 
+} from '@mui/material';
 import { useEffect } from 'react';
 import theme from './styles/theme';
 import Appbar from './components/Appbar/Appbar';
