@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { Button, Container, ThemeProvider } from '@mui/material';
+import { useEffect } from 'react';
+import theme from './styles/theme';
+import Appbar from './components/Appbar/Appbar';
 
 function App() {
+  useEffect(() => {
+    document.title = "Ecomm - Home";
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Container
+        maxWidth="xl"
+        sx={{
+          background: "#fff"
+        }}
+      >
+        <Appbar />
+        {
+          /*
+          Banner
+          Promotions
+          Title
+          Products
+          Footer
+          (hidden) Searchbox
+          (hidden) Appdrawer
+          */
+        }
+        <Button variant='contained'>Test</Button>
+      </Container>
+    </ThemeProvider>
   );
 }
 
