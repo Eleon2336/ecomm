@@ -1,11 +1,11 @@
 import { 
-  Button, 
   Container, 
   ThemeProvider 
 } from '@mui/material';
 import { useEffect } from 'react';
 import theme from './styles/theme';
 import Appbar from './components/Appbar/Appbar';
+import Banner from './components/Banner/Banner';
 
 function App() {
   useEffect(() => {
@@ -21,9 +21,9 @@ function App() {
         }}
       >
         <Appbar />
+        <Banner />
         {
           /*
-          Banner
           Promotions
           Title
           Products
@@ -32,7 +32,6 @@ function App() {
           (hidden) Appdrawer
           */
         }
-        <Button variant='contained'>Test</Button>
       </Container>
     </ThemeProvider>
   );
