@@ -11,21 +11,21 @@ const messages = [
 ];
 
 export default function Promotions() {
-    const containerRef = useRef();
+    const containerRef = useRef(); //somehow, this keeps this text in the component
     const [messageIndex, setMessageIndex] = useState(0);
-    const [show, setShow] = useState(true);
+    const [show, setShow] = useState(true); //somehow, this helps the text slide
 
     useEffect(() => {
-        setTimeout(() => {
+        setTimeout(() => { //somehow, this helps the text slide
             setShow(false);
         }, 3000)
 
         const intervalId = setInterval(() => {
-            setMessageIndex(i => (i + 1) % messages.length);
-            setShow(true);
+            setMessageIndex(i => (i + 1) % messages.length); //resets index back to zero once index exceeds messages array length
+            setShow(true); //somehow, this helps the text slide
 
             setTimeout(() => {
-                setShow(false);
+                setShow(false); //somehow, this helps the text slide
             }, 3000)
         }, 4000);
 
@@ -35,7 +35,7 @@ export default function Promotions() {
     }, [])
 
     return (
-        <PromotionsContainer ref={containerRef}>
+        <PromotionsContainer ref={containerRef }> {/* somehow, this keeps this text in the component */}
             <Slide
                 container={containerRef.current}
                 direction={show ? "left" : "right"}
