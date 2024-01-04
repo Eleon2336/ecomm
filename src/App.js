@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import theme from './styles/theme';
 import Appbar from './components/Appbar/Appbar';
 import Banner from './components/Banner/Banner';
+import Promotions from './components/Promotions/Promotions';
 
 function App() {
   useEffect(() => {
@@ -22,9 +23,9 @@ function App() {
       >
         <Appbar />
         <Banner />
+        <Promotions />
         {
           /*
-          Promotions
           Title
           Products
           Footer
